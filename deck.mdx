@@ -1,0 +1,88 @@
+import { Appear, Head, Image } from "mdx-deck";
+import { FullScreenCode } from "mdx-deck/layouts";
+import { yellow } from "mdx-deck/themes";
+import okaidia from "react-syntax-highlighter/styles/prism/okaidia";
+
+export const theme = {
+    ...yellow,
+    prism: { style: okaidia }
+};
+
+<Head>
+    <title>Wprowadzenie do programowania reaktywnego z wykorzstaniem rxjs</title>
+</Head>
+
+## Wprowadzenie do programowanie reaktywnego z wykorzystaniem rxjs
+
+### Piotr Łukomiak
+
+---
+
+### Reactive programming
+
+<ul>
+    <Appear>
+        <li>declarative</li>
+        <li>streams</li>
+        <li>auto-propagates changes</li>
+    </Appear>
+</ul>
+
+---
+
+### Stream
+
+A sequence of _events_ ordered in time
+
+---
+
+### Stream events
+
+<ul>
+    <Appear>
+        <li>values</li>
+        <li>errors</li>
+        <li>competion signal</li>
+    </Appear>
+</ul>
+
+---
+
+### Marble diagrams
+
+<Image src="img/marble-diagram.png" size="contain" />
+
+---
+
+### ASCII diagrams
+
+```
+--0--1--2--3--4--5--6--7--8--9--X-|->
+
+0..9 🠆 values
+X    🠆 error
+|    🠆 completion signal
+
+```
+
+---
+
+### How to use it?
+
+Subscribe!
+
+---
+
+```javascript
+stream.subscribe({
+    next: value => {
+        /* ... */
+    },
+    error: error => {
+        /* ... */
+    },
+    complete: () => {
+        /* ... */
+    }
+});
+```

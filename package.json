@@ -1,0 +1,27 @@
+{
+    "name": "rxjs-workshop",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "mdx-deck deck.mdx",
+        "build": "mdx-deck build deck.mdx",
+        "format": "prettier --write \"*.{js,jsx,ts,tsx,md,mdx}\""
+    },
+    "devDependencies": {
+        "husky": "^2.4.0",
+        "lint-staged": "^8.2.0",
+        "mdx-deck": "^1.7.7",
+        "mdx-deck-code-surfer": "^0.5.5",
+        "prettier": "^1.18.2",
+        "raw-loader": "^0.5.1"
+    },
+    "lint-staged": {
+        "linters": {
+            "*.{js,jsx,ts,tsx,md,mdx}": [
+                "prettier --write",
+                "git add"
+            ]
+        }
+    }
+}
