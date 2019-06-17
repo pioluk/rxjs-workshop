@@ -16,6 +16,11 @@
         "prettier": "^1.18.2",
         "raw-loader": "^0.5.1"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "lint-staged": {
         "linters": {
             "*.{js,jsx,ts,tsx,md,mdx}": [
