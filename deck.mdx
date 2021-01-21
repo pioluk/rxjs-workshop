@@ -5,7 +5,7 @@ import okaidia from "react-syntax-highlighter/styles/prism/okaidia";
 
 export const theme = {
     ...yellow,
-    prism: { style: okaidia }
+    prism: { style: okaidia },
 };
 
 <Head>
@@ -75,15 +75,15 @@ Subscribe!
 
 ```javascript
 stream.subscribe({
-    next: value => {
+    next: (value) => {
         /* ... */
     },
-    error: error => {
+    error: (error) => {
         /* ... */
     },
     complete: () => {
         /* ... */
-    }
+    },
 });
 ```
 
@@ -177,7 +177,7 @@ stream.subscribe({
 [multicast + factory](https://codesandbox.io/s/rxjs-workshop-multicast-factory-3crqt)  
 [share](https://codesandbox.io/s/rxjs-workshop-share-uuddm)  
 [publishReplay + refCount](https://codesandbox.io/s/rxjs-workshop-publishreplay-refcount-j4i64)  
-[shareReplay](https://codesandbox.io/s/rxjs-workshop-sharereplay-7jfwg)  
+[shareReplay](https://codesandbox.io/s/rxjs-workshop-sharereplay-7jfwg)
 
 ---
 
@@ -186,9 +186,7 @@ stream.subscribe({
 [Starter](https://codesandbox.io/s/restless-framework-ompjd)
 
 <Appear>
-    <a href="https://codesandbox.io/s/sleepy-minsky-qbfy0">
-        Solution
-    </a>
+    <a href="https://codesandbox.io/s/sleepy-minsky-qbfy0">Solution</a>
 </Appear>
 
 ---
@@ -204,8 +202,9 @@ stream.subscribe({
 ---
 
 # rxjs vNext
-- [Work in progress](https://github.com/ReactiveX/rxjs/tree/experimental)
-- ETA undefined
-- Heavily inspired by [the callbag spec](https://github.com/callbag/callbag)
-  - [Why we need Callbags](https://staltz.com/why-we-need-callbags.html)
-  - [Callback Heaven](https://www.youtube.com/watch?v=HssczgaY9BM)
+
+-   [Work in progress](https://github.com/ReactiveX/rxjs/tree/experimental)
+-   ETA undefined
+-   Heavily inspired by [the callbag spec](https://github.com/callbag/callbag)
+    -   [Why we need Callbags](https://staltz.com/why-we-need-callbags.html)
+    -   [Callback Heaven](https://www.youtube.com/watch?v=HssczgaY9BM)
